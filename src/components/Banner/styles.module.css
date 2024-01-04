@@ -1,0 +1,40 @@
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.hero {
+  position: absolute;
+  left: 100px;
+  top: 130px;
+  text-transform: uppercase;
+  width: 300px;
+}
+
+.hero :first-child {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.hero :nth-child(2) {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  padding: 12px;
+  font: inherit;
+  border: none;
+  background-color: #383838;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
