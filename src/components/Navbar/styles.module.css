@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.nav div {
+  display: flex;
+  gap: 15px;
+}
+
+.nav h3 {
+  font-size: 1.5rem;
+}
+
+.nav button {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav button span {
+  display: inline-block;
+}

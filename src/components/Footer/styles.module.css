@@ -1,0 +1,26 @@
+.footer {
+  background-color: black;
+  color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.content h4 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.content p {
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: rgb(149, 176, 176);
+}
+
+.content p:hover {
+  color: white;
+}
