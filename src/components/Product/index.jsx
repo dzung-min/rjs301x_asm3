@@ -1,9 +1,9 @@
 import styles from "./styles.module.css"
 
-function Product({ product }) {
+function Product({ product, clickHandler }) {
   return (
     <div className={styles.product}>
-      <div className={styles.image}>
+      <div onClick={clickHandler.bind(null, product)} className={styles.image}>
         <img src={product.img1} alt={product.name} />
       </div>
       <p className={styles.name}>{product.name}</p>

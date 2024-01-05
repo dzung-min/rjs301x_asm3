@@ -8,6 +8,7 @@ import CartPage from "./pages/Cart"
 import CheckoutPage from "./pages/Checkout"
 import LoginPage from "./pages/Login"
 import RegisterPage from "./pages/Register"
+import ShopProductList from "./components/ShopProductList"
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
     element: <RootPage />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "shop", element: <ShopPage /> },
+      {
+        path: "shop",
+        element: <ShopPage />,
+        children: [{ index: true, element: <ShopProductList /> }],
+      },
       { path: "detail", element: <DetailPage /> },
       { path: "cart", element: <CartPage /> },
       { path: "checkout", element: <CheckoutPage /> },

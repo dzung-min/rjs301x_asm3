@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react"
+import { useDispatch } from "react-redux"
 
 import ProductList from "../ProductList"
 import styles from "./styles.module.css"
+import popUpSlice from "../../store/popup"
 
 function TrendingProductList() {
   const [trendingProducts, setTrendingProducts] = useState([])
+  const dispatch = useDispatch()
+
+  function productClickHandler(product) {
+    dispatch(popUpSlice.actions.showPopUp(product))
+  }
 
   useEffect(() => {
     async function getTrendingProducts() {
@@ -21,13 +28,17 @@ function TrendingProductList() {
     }
     getTrendingProducts()
   }, [])
+
   return (
     <div className={styles.trending}>
       <div className={styles.info}>
         <p>make the hard way</p>
         <p>top trending products</p>
       </div>
-      <ProductList products={trendingProducts} />
+      <ProductList
+        products={trendingProducts}
+        productClickHandler={productClickHandler}
+      />
     </div>
   )
 }
