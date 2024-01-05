@@ -1,0 +1,14 @@
+.trending {
+  margin-top: 30px;
+}
+
+.info {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.info :nth-child(2) {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}

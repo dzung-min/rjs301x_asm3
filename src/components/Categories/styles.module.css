@@ -1,0 +1,31 @@
+.categories {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.info {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.info :nth-child(2) {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.products img {
+  border-radius: 10px;
+}
+
+.products img:hover {
+  filter: contrast(1.2);
+}

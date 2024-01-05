@@ -1,0 +1,21 @@
+.product {
+  width: 250px;
+  text-align: center;
+}
+
+.product:hover {
+  filter: contrast(1.2);
+}
+
+.image {
+  margin-bottom: 15px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.name {
+  font-weight: 500;
+  margin-bottom: 10px;
+}

@@ -13,11 +13,11 @@ function Navbar() {
       <h3>BOUTIQUE</h3>
       <div>
         <button onClick={() => navigate("/cart")}>
-          <span class="material-symbols-outlined">shopping_cart</span>
+          <span className="material-symbols-outlined">shopping_cart</span>
           <span>Cart</span>
         </button>
         <button onClick={() => navigate("/login")}>
-          <span class="material-symbols-outlined">person</span>
+          <span className="material-symbols-outlined">person</span>
           <span>Login</span>
         </button>
       </div>
