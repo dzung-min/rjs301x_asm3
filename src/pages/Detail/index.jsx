@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom"
 import ImageDetail from "../../components/ImageDetail"
 import InfoDetail from "../../components/InfoDetail"
 import styles from "./styles.module.css"
+import DescDetail from "../../components/DescDetail"
+import RelatedProduct from "../../components/RelatedProduct"
 
 function DetailPage() {
   const products = useSelector((state) => state.products.products)
@@ -20,6 +22,8 @@ function DetailPage() {
         <ImageDetail images={images} />
         <InfoDetail product={product} />
       </div>
+      <DescDetail product={product} />
+      <RelatedProduct product={product} />
     </>
   )
 }
