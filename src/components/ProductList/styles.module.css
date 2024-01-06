@@ -1,6 +1,6 @@
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
   justify-content: space-between;
+  gap: 20px;
 }

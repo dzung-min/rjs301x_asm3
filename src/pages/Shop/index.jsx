@@ -5,10 +5,17 @@ import styles from "./styles.module.css"
 function ShopPage() {
   return (
     <div>
-      <div>Shop</div>
+      <div className={styles.banner}>
+        <h2>Shop</h2>
+        <h5>Shop</h5>
+      </div>
       <div className={styles.products}>
-        <Sidebar />
-        <Outlet />
+        <div>
+          <Sidebar />
+        </div>
+        <div>
+          <Outlet />
+        </div>
       </div>
     </div>
   )

@@ -9,6 +9,9 @@ import CheckoutPage from "./pages/Checkout"
 import LoginPage from "./pages/Login"
 import RegisterPage from "./pages/Register"
 import ShopProductList from "./components/ShopProductList"
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { fetchProducts } from "./store/products"
 
 const router = createBrowserRouter([
   {
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
         element: <ShopPage />,
         children: [{ index: true, element: <ShopProductList /> }],
       },
-      { path: "detail", element: <DetailPage /> },
+      { path: "detail/:product_id", element: <DetailPage /> },
       { path: "cart", element: <CartPage /> },
       { path: "checkout", element: <CheckoutPage /> },
       { path: "login", element: <LoginPage /> },
@@ -31,6 +34,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [dispatch])
+
   return <RouterProvider router={router} />
 }
 
