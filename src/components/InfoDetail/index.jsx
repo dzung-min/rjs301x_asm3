@@ -1,8 +1,12 @@
 import { useRef } from "react"
 import styles from "./styles.module.css"
+import { useSelector, useDispatch } from "react-redux"
+import cartSlice from "../../store/cart"
 
 function InfoDetail({ product }) {
   const inputRef = useRef()
+  const dispatch = useDispatch()
+  const currentCustomer = useSelector((state) => state.user.user)
 
   function increaseHandler() {
     inputRef.current.value++
@@ -11,6 +15,18 @@ function InfoDetail({ product }) {
   function decreaseHandler() {
     if (Number(inputRef.current.value) === 1) return
     inputRef.current.value--
+  }
+
+  function addToCartHandler(e) {
+    e.preventDefault()
+    dispatch(
+      cartSlice.actions.add_cart({
+        customer_email: currentCustomer ? currentCustomer.email : "unknown",
+        product,
+        quantity: Number(inputRef.current.value),
+      })
+    )
+    inputRef.current.value = 1
   }
 
   return (
@@ -23,7 +39,7 @@ function InfoDetail({ product }) {
       <p className={styles.category}>
         <span>CATEGORY:</span> {product.category}
       </p>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={addToCartHandler}>
         <div className={styles.placeholder}>QUANTITY</div>
         <input type="number" min={1} defaultValue={1} ref={inputRef} />
         <button

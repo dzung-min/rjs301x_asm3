@@ -10,6 +10,7 @@ function ShopProductList() {
 
   function visitDetailPage(product) {
     navigate(`/detail/${product._id.$oid}`)
+    window.scrollTo(0, 0)
   }
 
   return (

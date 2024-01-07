@@ -1,9 +1,13 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import styles from "./styles.module.css"
 
 function ImageDetail({ images }) {
   const [showImage, setShowImage] = useState(images[0])
+
+  useEffect(() => {
+    setShowImage(images[0])
+  }, [images])
 
   function imgClickHandler(image) {
     setShowImage(image)

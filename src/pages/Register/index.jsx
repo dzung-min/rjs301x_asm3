@@ -1,5 +1,11 @@
+import AuthForm from "../../components/AuthForm"
+
 function RegisterPage() {
-  return <div>Register Page</div>
+  return (
+    <div>
+      <AuthForm isRegister={true} />
+    </div>
+  )
 }
 
 export default RegisterPage

@@ -1,5 +1,11 @@
+import AuthForm from "../../components/AuthForm"
+
 function LoginPage() {
-  return <div>Login Page</div>
+  return (
+    <div>
+      <AuthForm />
+    </div>
+  )
 }
 
 export default LoginPage

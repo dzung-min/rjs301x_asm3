@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 
 const initialState = {
   products: [],
+  loading: true,
 }
 
 // the thunk
@@ -23,6 +24,7 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.products = action.payload
+      state.loading = false
     })
   },
 })

@@ -12,6 +12,8 @@ import ShopProductList from "./components/ShopProductList"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { fetchProducts } from "./store/products"
+import userSlice from "./store/user"
+import cartSlice from "./store/cart"
 
 const router = createBrowserRouter([
   {
@@ -35,10 +37,13 @@ const router = createBrowserRouter([
 
 function App() {
   const dispatch = useDispatch()
-
+  const currentUser = JSON.parse(window.localStorage.getItem("current_user"))
+  const carts = JSON.parse(window.localStorage.getItem("carts") || "[]")
   useEffect(() => {
+    dispatch(userSlice.actions.login(currentUser))
+    dispatch(cartSlice.actions.set_carts(carts))
     dispatch(fetchProducts())
-  }, [dispatch])
+  }, [dispatch, currentUser, carts])
 
   return <RouterProvider router={router} />
 }

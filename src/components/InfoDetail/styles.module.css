@@ -41,6 +41,7 @@
   padding: 0 15px;
   background-color: #383838;
   border: none;
+  cursor: pointer;
 }
 
 .form input {
