@@ -1,0 +1,108 @@
+.chat-container {
+  position: fixed;
+  right: 100px;
+  bottom: 170px;
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  z-index: 999;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 3px gray;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  border-bottom: 1px solid gray;
+  color: black;
+  font-weight: 500;
+}
+
+.header button {
+  border: none;
+  padding: 5px 10px;
+  background-color: #e7e7e7;
+  cursor: pointer;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  border-top: 1px solid gray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: #ececec;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.footer input {
+  height: 30px;
+  padding-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.footer button {
+  border: none;
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+.footer button:last-of-type {
+  color: cornflowerblue;
+}
+
+.main {
+  padding: 20px;
+}
+.main p {
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+}
+
+.admin,
+.guess {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.guess {
+  flex-direction: row-reverse;
+}
+
+.guess p {
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+
+.admin p {
+  background-color: #ececec;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+}
+
+.icon span {
+  font-size: 2rem;
+}

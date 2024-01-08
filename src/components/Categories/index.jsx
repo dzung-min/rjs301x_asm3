@@ -10,8 +10,9 @@ import product_5 from "../../assets/product_5.png"
 function Categories() {
   const navigate = useNavigate()
 
-  function categorySelectHandler() {
-    navigate("/shop")
+  function categorySelectHandler(category) {
+    navigate(`/shop?category=${category}`)
+    window.scrollTo(0, 0)
   }
 
   return (
@@ -21,19 +22,19 @@ function Categories() {
         <p>browse our categories</p>
       </div>
       <div className={styles.products}>
-        <div onClick={categorySelectHandler}>
+        <div onClick={categorySelectHandler.bind(null, "iphone")}>
           <img src={product_1} alt="product_1" />
         </div>
-        <div onClick={categorySelectHandler}>
+        <div onClick={categorySelectHandler.bind(null, "macbook")}>
           <img src={product_2} alt="product_2" />
         </div>
-        <div onClick={categorySelectHandler}>
+        <div onClick={categorySelectHandler.bind(null, "ipad")}>
           <img src={product_3} alt="product_3" />
         </div>
-        <div onClick={categorySelectHandler}>
+        <div onClick={categorySelectHandler.bind(null, "watch")}>
           <img src={product_4} alt="product_4" />
         </div>
-        <div onClick={categorySelectHandler}>
+        <div onClick={categorySelectHandler.bind(null, "airpod")}>
           <img src={product_5} alt="product_5" />
         </div>
       </div>
