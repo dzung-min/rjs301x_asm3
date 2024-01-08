@@ -1,14 +1,13 @@
 import { Outlet } from "react-router-dom"
+
 import Sidebar from "../../components/Sidebar"
 import styles from "./styles.module.css"
+import PageTitle from "../../components/PageTitle"
 
 function ShopPage() {
   return (
     <div>
-      <div className={styles.banner}>
-        <h2>Shop</h2>
-        <h5>Shop</h5>
-      </div>
+      <PageTitle title="shop" />
       <div className={styles.products}>
         <div>
           <Sidebar />

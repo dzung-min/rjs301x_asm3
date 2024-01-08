@@ -16,12 +16,13 @@
 
 .hero :first-child {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .hero :nth-child(2) {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
+  color: black;
 }
 
 .hero p {

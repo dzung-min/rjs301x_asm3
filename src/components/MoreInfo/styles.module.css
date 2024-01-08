@@ -9,6 +9,7 @@
 .services h4 {
   margin-bottom: 10px;
   font-size: 1.3rem;
+  color: black;
 }
 
 .subcribe {
@@ -21,6 +22,7 @@
 .subcribe h4 {
   margin-bottom: 10px;
   font-size: 1.3rem;
+  color: black;
 }
 
 .subcribe input,

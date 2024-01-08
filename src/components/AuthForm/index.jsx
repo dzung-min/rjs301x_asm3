@@ -12,6 +12,7 @@ import {
 } from "../../helpers"
 
 // Component
+// isRegister is used to indicate if the form is for login or register
 function AuthForm({ isRegister }) {
   const nameInputRef = useRef()
   const emailInputRef = useRef()
@@ -32,6 +33,7 @@ function AuthForm({ isRegister }) {
     }
     if (isNotValidPassword(password)) {
       alert("Invalid password")
+      return
     }
     const users = JSON.parse(window.localStorage.getItem("users")) || []
     for (let user of users) {

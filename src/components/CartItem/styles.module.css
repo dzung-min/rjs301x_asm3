@@ -1,0 +1,47 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.8fr;
+  align-items: center;
+}
+
+.item img {
+  width: 80%;
+}
+
+.name {
+  color: black;
+  font-weight: 500;
+}
+
+.quantity,
+.remove {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctrl-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.btn-greater {
+  left: 75px;
+  top: -3px;
+}
+
+.btn-lesser {
+  left: 25px;
+  top: -3px;
+}
+
+.remove button {
+  border: none;
+  background-color: transparent;
+  width: fit-content;
+  cursor: pointer;
+}

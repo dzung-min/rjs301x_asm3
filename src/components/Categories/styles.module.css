@@ -16,9 +16,10 @@
   margin-bottom: 20px;
 }
 
-.info :nth-child(2) {
+.info :last-child {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  color: black;
   margin-top: 10px;
 }
 

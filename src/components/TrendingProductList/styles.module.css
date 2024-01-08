@@ -7,8 +7,9 @@
   margin-bottom: 30px;
 }
 
-.info :nth-child(2) {
+.info :last-child {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: 10px;
+  color: black;
 }

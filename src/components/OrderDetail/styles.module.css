@@ -1,0 +1,49 @@
+.order {
+  background-color: #f8f9fa;
+  padding: 30px;
+  height: fit-content;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.item {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 3fr 2fr;
+  align-items: end;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.item p:last-of-type {
+  text-align: end;
+}
+
+.item :first-child {
+  font-weight: 400;
+  color: black;
+}
+
+.total {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 3fr 2fr;
+  align-items: end;
+  margin-top: 15px;
+  color: black;
+}
+
+.total :first-child {
+  font-weight: 400;
+}
+
+.total :last-child {
+  text-align: end;
+  font-size: 1.2rem;
+}

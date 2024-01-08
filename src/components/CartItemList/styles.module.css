@@ -1,0 +1,48 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.8fr;
+  text-align: center;
+  background-color: #f6f9f6;
+  height: 50px;
+  color: black;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.list {
+  margin: 10px 0;
+}
+
+.list p {
+  text-align: center;
+}
+
+.footer {
+  background-color: #f6f9f6;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.footer button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.footer button:last-of-type {
+  border: 1px solid gray;
+  padding: 5px 10px;
+}

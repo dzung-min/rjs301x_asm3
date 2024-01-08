@@ -1,0 +1,19 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 250px;
+  background-color: #f8f9fa;
+  padding: 0 50px;
+  text-transform: uppercase;
+}
+
+.title h2 {
+  color: black;
+  font-size: 1.7rem;
+}
+
+.title h5 {
+  color: #727272;
+  font-size: 1.1rem;
+}

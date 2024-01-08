@@ -34,6 +34,10 @@
   margin-bottom: 10px;
 }
 
+.detail h3 {
+  color: black;
+}
+
 .img img {
   width: 350px;
 }
