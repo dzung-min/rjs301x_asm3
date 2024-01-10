@@ -2,8 +2,9 @@ import styles from "./styles.module.css"
 
 function ChatWindow({ isShow }) {
   const classes = isShow
-    ? styles["chat-container"]
+    ? `${styles["chat-container"]} ${styles.bump}`
     : `${styles["chat-container"]} ${styles.hidden}`
+
   return (
     <div className={classes}>
       <div className={styles.header}>

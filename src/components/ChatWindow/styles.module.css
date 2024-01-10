@@ -106,3 +106,28 @@
 .icon span {
   font-size: 2rem;
 }
+
+@keyframes chatbox {
+  from {
+    transform: rotate(10deg);
+    scale: 0.8;
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+    scale: 1.2;
+  }
+
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.bump {
+  animation-name: chatbox;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
